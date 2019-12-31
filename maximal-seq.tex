@@ -1,0 +1,50 @@
+\documentclass{article}
+
+\begin{document}
+
+Let $\Omega(x)=\sum e_i$ if $x=\prod p_i^{e_i}$ is the prime factorization of $x$.
+
+Let $\Psi_t$ be the set of integers such that if $x\in \Psi_t$ then
+$\Omega(x+m)=t$ for $1\leq m<2^t$.  It is easy to see that elements of $\Psi_t$
+are one less than a maximal sequence of numbers with fixed $\Omega$.
+
+We will show that $2\Psi_2\subseteq\Psi_3$ and generally that
+$2\Psi_t\subseteq\Psi_{t+1}$.  We'll call this the inclusion property.
+
+With these definitions observe that $Psi_1$ is the set of even integers that
+precede prime numbers union the set ${1}$.  With that exception in mind, the
+rest of this article excludes any statements of $\Psi_1$.
+
+\section{Optimized Primality Sieve}
+
+For $t>1$, there can be no longer sequence of $x\in \mathbb{Z}$ with
+$\Omega(x)=t$ than $2^t-1$ elements.
+Observe that $\Omega(m\cdot 2^t)>t$ as long as $m>1$.
+
+
+
+% low factor sieve based on $2\cdot 3\cdot 5\cdot 7$.
+% special algorithm for $\Psi_2$
+% generate test cases \Psi_3 from each element of $\Psi_2$.
+
+
+
+\section{Distribution of $\Gamma_n(t)$}
+
+% distribution of $\Gamma_n$ and $\Gamma_n^{odd}$.
+% fixed tail of $\Gamma_n$
+
+Let $\Gamma_n(t)=#\{x|\Omega(x)=t\textrm{ and }2^n\leq x<2^{n+1}\}$
+and $\Gamma^{odd}_n(t)=#\{x|\Omega(x)=t\textrm{ and }x odd\textrm{ and }2^n\leq x<2^{n+1}\}$.  Then 
+\[
+	\Gamma_n(t)=\Gamma_{n-1}(t-1)+\Gamma_n^{odd}(t)\textrm{.}
+	\]
+
+\section{Observed Cardinalities of Bounded $Psi_t$}
+
+% expected occurrences if $\Omega(x)$ is independent for distinct $x$
+% expected cardinalities of $\Psi_t$ based on $\Psi_{t-1}$.
+% conjectural smallest elemnt of $\Psi_5$.
+
+
+\end{document}
