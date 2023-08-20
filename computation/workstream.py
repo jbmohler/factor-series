@@ -17,7 +17,7 @@ def work_stream(gen):
     queue = []
     with futures.ProcessPoolExecutor(max_workers=workers) as tp:
         # pre-stuff the executor with enough of work to have max running
-        for func, args, kwargs in itertools.islice(gen, 0, workers + 2):
+        for func, args, kwargs in itertools.islice(gen, 0, workers * 2):
             queue.append(tp.submit(func, *args, **kwargs))
 
         while len(queue):
